@@ -1,0 +1,6 @@
+name: MMaquinas
+version: 1.0
+main: mmaquinas.Main
+commands:
+  maquina:
+  combustivel:
