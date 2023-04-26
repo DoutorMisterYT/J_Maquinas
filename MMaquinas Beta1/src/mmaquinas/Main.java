@@ -4,6 +4,11 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import comandos.CombustivelComando;
+import comandos.MaquinaComando;
+import eventos.MaquinaController;
+import manager.MaquinaAPI;
+
 public class Main extends JavaPlugin {
   public static Main pl;
   
@@ -13,10 +18,12 @@ public class Main extends JavaPlugin {
     Bukkit.getConsoleSender().sendMessage("Maquinas carregadas com sucesso!");
     registerComandos();
     registerEventos();
+    MySql.connect();
   }
   
   public void onDisable() {
     MaquinaAPI.save();
+    MySql.disconnect();
   }
   
   public void registerComandos() {

@@ -1,10 +1,14 @@
-package mmaquinas;
+package manager;
 
 import net.eduard.api.setup.ConfigAPI;
 import net.eduard.api.setup.Mine;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.Plugin;
+
+import mmaquinas.Combustivel;
+import mmaquinas.Main;
+import mmaquinas.Maquina;
 
 public class MaquinaAPI {
   public static ConfigAPI config = new ConfigAPI("maquinas.yml", (Plugin)Main.pl);
